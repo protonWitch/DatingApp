@@ -1,4 +1,4 @@
-<div class="class-row" *ngIf="member">
+<div class="row" *ngIf="member">
   <div class="col-4">
     <div class="card">
       <img
@@ -32,6 +32,7 @@
       </div>
     </div>
   </div>
+
   <div class="col-8">
     <tabset class="member-tabset">
       <tab heading="About {{ member.knownAs }}">
@@ -45,7 +46,12 @@
         <p>{{ member.interests }}</p>
       </tab>
       <tab heading="Photos" #photoTab="tab">
-        <gallery *ngIf="photoTab.active" [items]="images" class="gallery"></gallery>>
+        <gallery
+          *ngIf="photoTab.active"
+          [items]="images"
+          class="gallery"
+        ></gallery
+        >>
       </tab>
       <tab heading="Messages">
         <p>Messages go here</p>
